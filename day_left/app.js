@@ -16,7 +16,7 @@ function getDays() {
   
   // 표시
   document.querySelector('.result .text').innerHTML = `
-    <span>${Math.floor(남은날)}</span>일 남았습니다.
+    <span>${Math.ceil(남은날)}</span>일 남았습니다.
   `;
 
   return false;
