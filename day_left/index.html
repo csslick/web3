@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <form class='cy-form' onsubmit='return getDays()'>
+      <h2>남은 날 계산하기</h2>
+      <p style="color: #666;">다가올 시간을 입력해 주세요.</p><br><br>
+      <div class="row">
+        <div class="input-group">
+          <label for="year">년도</label>   
+          <input type="text" id="year" required >
+        </div>
+         <div class="input-group">
+          <label for="month">월</label>   
+          <input type="text" id="month">
+        </div>
+          <div class="input-group">
+          <label for="day">일</label>   
+          <input type="text" id="day">
+        </div>
+        <button id='submit' type='submit'>확인</button>
+      </div> <!-- row -->  
+    </form>  
+    <div class="result">
+      <p class="text"></p>
+    </div>
+  </div>
+  
+</body>
+</html>
