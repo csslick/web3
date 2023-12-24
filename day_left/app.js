@@ -1,4 +1,6 @@
-function getDays() {
+function getDays(e) {
+  e.preventDefault();
+  
   // 다가올 시간 입력
   const inputYear = document.querySelector('#year').value;
   const inputMonth = document.querySelector('#month').value;
@@ -18,6 +20,4 @@ function getDays() {
   document.querySelector('.result .text').innerHTML = `
     <span>${Math.ceil(남은날)}</span>일 남았습니다.
   `;
-
-  return false;
 }

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#portfolio {
+  padding: 20px;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 1em;
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#list li {
+  width: calc((100% - 20px) / 3);
+}
+
+#list li img {
+  width: 100%;
+}
+

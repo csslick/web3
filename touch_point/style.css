@@ -1,0 +1,69 @@
+body {
+  height: 100vh;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  background: conic-gradient(red 45%, gray 45%);
+  padding: 20px;
+}
+.circle .inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle .gift-box {
+  position: absolute;
+  bottom: -20px;
+  background: #fff;
+  font-size: 48px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.circle .count {
+  font-size: 2.2em;
+}
+.circle .coin {
+  position: absolute;
+  background: gold;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, 140px);
+  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.circle .coin.anim {
+  animation-name: coin;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  display: flex;
+}
+
+@keyframes coin {
+  50% {
+    opacity: 70%;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

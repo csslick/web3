@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input, select {
+      padding: 6px 1em;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>주문한 메뉴</h2>
+  <p id="order">주문한 메뉴가 없습니다.</p>
+  <select name="foods" id="food" onchange="getInput(this)">
+    <option value="김밥">김밥</option>
+    <option value="순대">순대</option>
+    <option value="라면">라면</option>
+    <option value="default" selected hidden>메뉴를 선택하세요</option>
+  </select>
+
+
+  <script>
+    function getInput(el) {
+      document.querySelector('#order').innerHTML = el.value;
+    }
+  </script>
+
+  <hr>
+  <!-- <form onsubmit="return getGender(this)">
+    <input type="radio" name="gender" id="male" value="남">남
+    <input type="radio" name="gender" id="female" value="여">여
+    <button>확인</button>
+  </form>
+
+  <script>
+    function getGender(el) {
+      console.log(el.gender.value);
+      return false;
+    }
+  </script> -->
+  
+  <hr><br>
+  <form>
+    <label for="">태어난 년도</label>
+    <input type="text" name="year" id="year">
+    <button onclick="getAge(event)">확인</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    function getAge(e) {
+      event.preventDefault();
+      let year = document.querySelector('#year');
+
+      if(isNaN(2023 - year.value)) {
+        document.querySelector('#result').innerHTML = '<p>숫자를 입력해주세요!</p>'; // 결과창 지우기
+        year.value = ''; // 입력란 지우기
+        return;
+      } 
+
+      if(year.value < 1900) {
+        document.querySelector('#result').innerHTML = `<p>1900년도 이후로 입력해 주세요</p>`;
+        return;
+      }
+
+      document.querySelector('#result').innerHTML = `<p>${2023 - year.value}</p>`;
+    }
+  </script>
+</body>
+
+</html>
